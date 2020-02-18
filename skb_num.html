@@ -1,0 +1,94 @@
+<head>
+<title>MDCNN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" media="screen and (min-width:600px)" href="css/over600.css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body>
+	<div class='header'>
+		<h1>Multimodal Voice Conversion Using a Deep Convolutional Neural Network in an Adverse Environment</h1>
+	</div>
+	<div class='info'>				
+		<i>
+		<p style='text-align: center;'>ZHOU JIAN<sup>1</sup>, HU YUTING<sup>1</sup>, LIAN HAILUN<sup>1</sup>, WANG HUABIN<sup>1</sup>,TAO LIANG<sup>1</sup>, 			Hon Keung Kwan<sup>2</sup></p>
+		<p style='text-align: center;'><sup>1</sup>MOE Key Laboratory of Intelligent Computing and Signal Processing, School of Computer Science and 				Technology, Anhui University, Hefei, China</p>
+		<p style='text-align: center;'><sup>2</sup>Department of Electrical and Computer Engineering, University of Windsor, Windsor, ON N9B 3P4, Canada</p>
+		</i>
+      		<p>This demo page provides some samples of speech conversion results using three different speech conversion algorithms in different noise environments. 
+                   The proposed MDCNN, the traditional NMF and the DNN algorithms are used respectively to conduct male to female speech conversion (Demo 1) as well as female 
+                   to female speech conversion (Demo 2). Six types of noise from the noise97 database are used to corrupt the clean speech to obtain the noisy speech in different noise environments.  </p>
+      		<p><span style="color:red;">Recommended browser: Google Chrome</span></p>
+                <p>Cite as: <span style="color:blue;">Jian Zhou, Yuting Hu, Hailun Lian, Huabin Wang, Liang Tao, and Hon Keung Kwan, "Multimodal voice conversion under adverse environment using a deep convolutional neural network," IEEE Access, vol. 7, pp. 170878-170887, 26 November 2019, DOI: 10.1109/ACCESS.2019.2955982</span></p>
+	</div>
+
+<div id='form'>
+	<div class="audio_container">
+
+		<div class='utterance'>
+			<div style="background:lightblue;" >
+				<br><h2 style='font-size:1.5em;'>Demo1: Female to female voice converison.</h2><br>
+			</div>
+		</div>
+
+		
+	<div class='utterance'>
+		<div class='utt_systems' style="background: lavender;">
+			<div class='system' style="width:300px">
+				<h3>source (without noise)</h3>
+				<audio controls>
+					<source src=source/BAC009S0768W0393.wav>
+				</audio>
+				<h2>就是下雨也去。</h2>
+				<h2>JIU SHI XIA YU YE QU.</h2>
+
+			</div>
+		
+			<div class='system'style="width:300px">
+				<h3>target</h3>
+				<audio controls>
+					<source src=target/BAC009S0765W0124.wav>
+				</audio>
+				<h2>就是下雨也去。</h2>
+				<h2>JIU SHI XIA YU YE QU.</h2>
+			</div>
+		
+			<div class='system'style="width:300px">
+				<h3>SKB50</h3>
+				<audio controls>
+					<source src=skb_num/skb50/skb50-tar-BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
+				</audio>
+				<h2>就是下雨也去。</h2>
+				<h2>JIU SHI XIA YU YE QU.</h2>
+			</div>
+		
+			<div class='system'style="width:300px">
+				<h3>SKB200</h3>
+				<audio controls>
+					<source src=skb_num/skb200/skb200-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
+				</audio>
+				<h2>就是下雨也去。</h2>
+				<h2>JIU SHI XIA YU YE QU.</h2>
+			</div>
+
+      <div class='system'style="width:300px">
+				<h3>SKB340</h3>
+				<audio controls>
+					<source src=skb_num/skb340/skb340-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
+				</audio>
+				<h2>就是下雨也去。</h2>
+				<h2>JIU SHI XIA YU YE QU.</h2>
+			</div>
+
+		</div>
+	</div>
+  </div>
+</br>
+</br>
+
+
+
+</body>
+</html>
