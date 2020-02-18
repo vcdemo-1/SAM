@@ -1,129 +1,149 @@
+<!DOCTYPE html>
+<html>
 <head>
-<title>MDCNN</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/index.css"/>
-	<link rel="stylesheet" media="screen and (min-width:600px)" href="css/over600.css"/>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Samples</title>
+  <style>
+body {
+  margin:0;
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+audio {
+  width: 250px;
+  margin-right: 10px;
+}
+.sample {
+  font-size: 0.9em;
+  font-style: italic;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+</style>
 </head>
 <body>
-	
-
-<div id='form'>
-	<div class="audio_container">
-
-		<div class='utterance'>
-			<div style="background:lightblue;" >
-				<br><h2 style='font-size:1.5em;'>Demo1: Female to female voice converison.</h2><br>
-			</div>
-		</div>	
-	<div class='utterance'>
-		<div class='utt_systems' style="background: lavender;">
-			<div class='system' style="width:300px">
-				<h3>source</h3>
-				<audio controls>
-					<source src=source/BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>target</h3>
-				<audio controls>
-					<source src=target/BAC009S0765W0124.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>SKB50</h3>
-				<audio controls>
-					<source src=skb_num/skb50/skb50-tar-BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>SKB200</h3>
-				<audio controls>
-					<source src=skb_num/skb200/skb200-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-
-                        <div class='system'style="width:300px">
-				<h3>SKB340</h3>
-				<audio controls>
-					<source src=skb_num/skb340/skb340-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-
-		</div>
-	</div>
-	<div class='utterance'>
-		<div class='utt_systems' style="background: lavender;">
-			<div class='system' style="width:300px">
-				<h3>source</h3>
-				<audio controls>
-					<source src=source/BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>target</h3>
-				<audio controls>
-					<source src=target/BAC009S0765W0124.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>SKB50</h3>
-				<audio controls>
-					<source src=skb_num/skb50/skb50-tar-BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-		
-			<div class='system'style="width:300px">
-				<h3>SKB200</h3>
-				<audio controls>
-					<source src=skb_num/skb200/skb200-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-
-                        <div class='system'style="width:300px">
-				<h3>SKB340</h3>
-				<audio controls>
-					<source src=skb_num/skb340/skb340-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav>
-				</audio>
-				<h2>就是下雨也去。</h2>
-				<h2>JIU SHI XIA YU YE QU.</h2>
-			</div>
-
-		</div>
-  </div>
-  </div>
-  </div>
-  </div>
-
-
-
-
+    <h2>samples converted by different skb models</h2>
+  <ul>
+    <li>The models are trained using AISHELL-1 corpus. Audios are resampled to 16kHz.</li>
+    <li>please listent to the converted samples and give a prefer choice for the one which you think is more similar to the target samples" </li>
+  </ul>
+</table>
+ 
+  
+  
 </body>
 </html>
+ 
+ 
+     <!-- F2M -->
+    <h3>target-female</h3>
+    <table border="1">
+    <tr>
+      <td>smple index</td>
+      <td>target sample</td>
+      <td>SKB50</td>
+      <td>SKB200</td>
+      <td>SKB340</td>
+    </tr>
+    <!-- MF 1 sample 4 pieces of audios  -->
+    <tr>
+      <td>female2female_1</td>
+      <td>
+        <audio controls>
+        <source src="target/BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb50/skb50-tar-BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb200/skb200-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb340/skb340-frame-tar-S0765_BAC009S0765W0124-src-S0768_BAC009S0768W0393.wav" type="audio/wav">
+        </audio>
+      </td>
+ </tr>
+    <tr>
+      <td>female2female_2</td>
+      <td>
+        <audio controls>
+        <source src="target/BAC009S0765W0124.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb50/skb50-tar-BAC009S0765W0124-src-S0769_BAC009S0769W0438.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb200/skb200-frame-tar-S0765_BAC009S0765W0124-src-S0769_BAC009S0769W0438.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb340/skb340-frame-tar-S0765_BAC009S0765W0124-src-S0769_BAC009S0769W0438.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+    <tr>
+      <td>male2female_1</td>
+      <td>
+        <audio controls>
+        <source src="target/BAC009S0768W0393.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb50/skb50-tar-BAC009S0768W0393-src-S0905_BAC009S0905W0334.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb200/skb200-frame-tar-S0768_BAC009S0768W0393-src-S0905_BAC009S0905W0334.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb340/skb340-frame-tar-S0768_BAC009S0768W0393-src-S0905_BAC009S0905W0334.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+  <tr>
+      <td>male2female_2</td>
+      <td>
+        <audio controls>
+        <source src="target/BAC009S0770W0358.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb50/skb50-tar-BAC009S0770W0358-src-S0916_BAC009S0916W0208.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb200/skb200-frame-tar-S0770_BAC009S0770W0358-src-S0916_BAC009S0916W0208.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td>
+        <audio controls>
+        <source src="skb_num/skb340/skb340-frame-tar-S0770_BAC009S0770W0358-src-S0916_BAC009S0916W0208.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
